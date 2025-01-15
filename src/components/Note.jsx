@@ -1,7 +1,8 @@
 import React from "react";
 import Entry from "./Entry";
+import notes from "../notes";
 
-function noteEntry(note){
+function createNote(note){
   return (
     <Entry 
       key={note.id}
@@ -13,8 +14,8 @@ function noteEntry(note){
 
 function Note() {
   return (
-    <div className="note">
-      
+    <div>
+      {notes.map(createNote)}
     </div>
   );
 }
